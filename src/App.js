@@ -1,23 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/Navbar';
+import WorkoutPlanner from './components/WorkoutPlanner';
+import { useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import DietPlanner from './components/DietPlanner';
+import HomePage from './components/HomePage';
+import BuySupplements from './components/BuySupplements';
 
 function App() {
+  const [tab,setTab]=useState('home')
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="header">
+      <Navbar/>
+      <div className='content'>
+       <Routes>
+        <Route path='/' element={<HomePage></HomePage>}></Route>
+        <Route path='workoutPlanner' element={<WorkoutPlanner/>}/>
+        <Route path='dietPlanner' element={<DietPlanner/>}/>
+        <Route path='protienSupplements' element={<BuySupplements/>}/>
+       </Routes>
+      </div>
     </div>
   );
 }

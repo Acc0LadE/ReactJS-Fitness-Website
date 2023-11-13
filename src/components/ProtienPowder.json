@@ -1,0 +1,183 @@
+[
+    {
+        "id": 1,
+        "name": "Whey Protein Isolate",
+        "brand": "Optimum Nutrition",
+        "flavor": "Double Rich Chocolate",
+        "size": "5 lbs",
+        "price": "$ 49.99",
+        "image": "https://via.placeholder.com/150"
+      },
+    {
+      "id": 2,
+      "name": "Plant-Based Protein Powder",
+      "brand": "Vega",
+      "flavor": "Vanilla",
+      "size": "2.2 lbs",
+      "price": "$ 29.99",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 3,
+      "name": "Creatine Monohydrate",
+      "brand": "Bulk Supplements",
+      "flavor": null,
+      "size": "1 kg",
+      "price": "$ 19.99",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 4,
+      "name": "Mass Gainer",
+      "brand": "Dymatize",
+      "flavor": "Rich Chocolate",
+      "size": "10 lbs",
+      "price": "$ 59.99",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 5,
+      "name": "BCAA Supplement",
+      "brand": "Scivation",
+      "flavor": "Watermelon",
+      "size": "30 servings",
+      "price": "$ 24.99",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 6,
+      "name": "Pre-Workout Energy Drink",
+      "brand": "Cellucor",
+      "flavor": "Fruit Punch",
+      "size": "20 servings",
+      "price": "$ 34.99",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 7,
+      "name": "Omega-3 Fish Oil",
+      "brand": "Nature's Bounty",
+      "flavor": null,
+      "size": "120 softgels",
+      "price": "$ 15.99",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 8,
+      "name": "Multivitamin Tablets",
+      "brand": "One A Day",
+      "flavor": null,
+      "size": "90 tablets",
+      "price": "$ 12.99",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 9,
+      "name": "Vitamin D3 Supplement",
+      "brand": "NOW Foods",
+      "flavor": null,
+      "size": "180 softgels",
+      "price": "$ 18.99",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 10,
+      "name": "Casein Protein Powder",
+      "brand": "MuscleTech",
+      "flavor": "Cookies and Cream",
+      "size": "4 lbs",
+      "price": "$ 39.99",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 11,
+      "name": "L-Glutamine Powder",
+      "brand": "NOW Sports",
+      "flavor": null,
+      "size": "500 grams",
+      "price": "$ 23.99",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 12,
+      "name": "ZMA Supplement",
+      "brand": "Optimum Nutrition",
+      "flavor": null,
+      "size": "90 capsules",
+      "price": "$ 21.99",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 13,
+      "name": "Biotin Supplement",
+      "brand": "Nature's Bounty",
+      "flavor": null,
+      "size": "120 softgels",
+      "price": "$ 10.99",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 14,
+      "name": "Probiotic Capsules",
+      "brand": "Renew Life",
+      "flavor": null,
+      "size": "60 capsules",
+      "price": "$ 27.99",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 15,
+      "name": "Joint Support Tablets",
+      "brand": "Doctor's Best",
+      "flavor": null,
+      "size": "120 tablets",
+      "price": "$ 22.99",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 16,
+      "name": "C4 Original Pre-Workout",
+      "brand": "Cellucor",
+      "flavor": "Icy Blue Razz",
+      "size": "30 servings",
+      "price": "$ 29.99",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 17,
+      "name": "Collagen Peptides Powder",
+      "brand": "Vital Proteins",
+      "flavor": null,
+      "size": "20 oz",
+      "price": "$ 33.99",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 18,
+      "name": "Turmeric Curcumin Capsules",
+      "brand": "Nature's Bounty",
+      "flavor": null,
+      "size": "60 capsules",
+      "price": "$ 17.99",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 19,
+      "name": "CLA Softgels",
+      "brand": "MusclePharm",
+      "flavor": null,
+      "size": "90 softgels",
+      "price": "$ 14.99",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 20,
+      "name": "Protein Bars Variety Pack",
+      "brand": "Quest Nutrition",
+      "flavor": "Assorted",
+      "size": "12 bars",
+      "price": "$ 21.99",
+      "image": "https://via.placeholder.com/150"
+    }
+  ]
+  

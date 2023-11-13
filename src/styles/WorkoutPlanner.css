@@ -1,0 +1,66 @@
+.Dateselector{
+    display: flex;
+    justify-content: space-evenly;
+
+    
+}
+.Calender{
+    width: 30%;
+    
+}
+.container{
+    width: 90%;
+    scroll-behavior: smooth;
+    font-size: 0.9em;
+    border-collapse: collapse;
+    min-width: 100px;
+    border-radius: 5px 5px 0 0;
+    overflow: scroll;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+   margin-top: 10px;
+    
+    
+}
+.container thead tr{
+    background-color: aquamarine;
+    color: black;
+    text-align: left;
+    font-weight: bold;
+
+}
+.container th, .container td{
+    padding: 15px 5px;
+    border-bottom: 2px solid black;
+
+}
+.container tbody tr:hover{
+    /* background-color: #D3CECD; */
+    cursor: pointer;
+
+}
+.container tbody tr{
+    border: 1px solid black;
+}
+.workoutTemplate{
+    display:  flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+
+}
+.DataTemplate{
+    margin-left: 10%;
+    margin-top: 2%;
+
+}
+.editIcons {
+    padding: 15px 5px;
+    /* border-bottom: 2px solid black; */
+    margin-left: 5px;
+    
+}
+.table-rows{
+    display: flex;
+    flex-direction: row;
+
+}
