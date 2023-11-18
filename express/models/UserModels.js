@@ -34,9 +34,11 @@ const meals =new schema({
 
 },{timestamps:true})
 const NutritionPlan =new schema({
-    meals:[meals],
+    name:String,
+    quantity:Number,
+    type:String,
     date:{
-        type:Date
+        type:String
     }
 
 },{timestamps:true})

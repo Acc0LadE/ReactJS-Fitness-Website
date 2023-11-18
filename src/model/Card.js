@@ -6,7 +6,7 @@ import { baseURL } from '../constants/Constants';
 const Card = (props) => {
     // console.log(props)
     const[quantity,setQuantity]=useState(0);
-    const [bought,setBought]=useState(false);
+    const [bought,setBought]=useState(props.updated=="False"?true:false);
     const [data,setData]=useState({
         'name':props.protienData['name'],
         'quantity':quantity,
@@ -15,32 +15,45 @@ const Card = (props) => {
     useEffect(()=>{
         setData({...data,"quantity":quantity})
     },[quantity])
+    useEffect(()=>{
+        if(props.updated=="True")
+        {
+            setBought(true)
+        }
+        else{
+            setBought(false)
+        }
+    },[])
     function BoughtProtien(event)
     {
         if(quantity>0)
         {
-            axios.post(`${baseURL}postProtienSupplement`,{protienSupplements:data})
+            axios.post(`${baseURL}postProteinSupplement`,{proteinSupplements:data,email:localStorage.getItem("email")})
             .then((res)=>{
               console.log(res.data)
             })
                   setBought(true);
 
         }
+        //props.updateChange()
        
 
 
     }
     function DeleteProtien(event)
     {
-        axios.post(`${baseURL}deleteProtienSupplement`,{protienSupplements:data})
+        axios.post(`${baseURL}deleteProteinSupplement`,{proteinSupplements:data,email:localStorage.getItem("email")})
   .then((res)=>{
     console.log(res.data)
+    props.updateChange(data.name)
+    
+
   })
         setBought(false);
     }
     function UpdateProtien(event)
     {
-        axios.put(`${baseURL}updateProtienSupplement`,{protienSupplements:data})
+        axios.put(`${baseURL}updateProteinSupplement`,{proteinSupplements:data,email:localStorage.getItem("email")})
   .then((res)=>{
     console.log(res.data)
   })
@@ -48,6 +61,9 @@ const Card = (props) => {
     }
   return (
     <div className='card'>
+        {/* {
+            console.log(props)
+        } */}
         <img src={props.protienData['image']} alt={props.protienData['name']} />
         <div className="card-body">
             <h3 className="card-title">{props.protienData['name']}</h3>
@@ -72,11 +88,12 @@ const Card = (props) => {
                     setQuantity(e.target.value)
                 }}></input>
             </div>
-            
-            {bought?
+            <br/>
+            {props.updated=="True"||bought==true?
             <div>
             <button className="card-content" onClick={UpdateProtien}>Update</button>
             <button className='card-content' onClick={DeleteProtien}>Delete</button>
+            
             </div>
             :<button className="card-content" onClick={BoughtProtien}>Buy</button>}
         </div>

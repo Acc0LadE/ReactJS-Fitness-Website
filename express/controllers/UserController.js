@@ -15,16 +15,35 @@ const getUserData=(req,res,next)=>{
         )
     })
 }
+const getUserDataBasedOnMailId=(req,res,next)=>{
+    console.log(req.params)
+    User.findOne(req.params)
+    .then(response =>{
+        res.json({response})
+        console.log(response)
+    })
+    .catch(error=>{
+        console.error(error)
+        res.json(
+            {
+                message:'error'
+            }
+        )
+    })
+    
+}
 const postUserData=(req,res,next)=>{
+    console.log("posting")
+    resVal=req.body.form
     let user=new User({
-        name:req.body.name,
-        password:req.body.password,
-        email:req.body.email,
-        phone:req.body.phone,
-        age:req.body.age,
-        workoutPlan: req.body.workoutPlan,
-        proteinSupplement:req.body.workoutPlan,
-        nutritionPlan:req.body.nutritionPlan
+        name:resVal.name,
+        password:resVal.password,
+        email:resVal.email,
+        phone:resVal.phone,
+        age:resVal.age,
+        workoutPlan: resVal.workoutPlan==null?[]:resVal.workoutPlan,
+        proteinSupplement:resVal.proteinSupplement==null?[]:resVal.proteinSupplement,
+        nutritionPlan:resVal.nutritionPlan==null?[]:resVal.nutritionPlan
 
     })
     user.save()
@@ -42,6 +61,7 @@ const postUserData=(req,res,next)=>{
                 }
             )
         })
+    console.log(resVal)
     
 
 }
@@ -69,5 +89,5 @@ const deleteUserData=(req,res,next)=>{
 
 }
 module.exports={
-    postUserData,updateUserData,deleteUserData,getUserData
+    postUserData,updateUserData,deleteUserData,getUserData,getUserDataBasedOnMailId
 }

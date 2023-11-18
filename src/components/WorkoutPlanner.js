@@ -3,7 +3,6 @@ import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import '../styles/WorkoutPlanner.css'
 import {useTable} from 'react-table'
-import fakeData from './MockData.json'
 import DatePicker from 'react-datepicker'
 import { AiFillEdit,AiOutlineCloseCircle } from "react-icons/ai";
 import axios from "axios"
@@ -15,7 +14,7 @@ const WorkoutPlanner = () => {
     const [workout,setWorkout]=useState([]);
     const [col1,setCol1]=useState([])
     const [flag,setFlag]=useState(null)
-    const [formData,setFormData]=useState({'id':1,
+    const [formData,setFormData]=useState({
       'name':'',
         'duration':'',
         'timeParam':'Hours',
@@ -44,7 +43,7 @@ useEffect(()=>{
   
 },[])
 useEffect(()=>{
-  axios.post(`${baseURL}getFitnessPlan`,{email:"spiderman123@gmail.com",workout:{...formData,'date':date}}).then((res)=>{
+  axios.post(`${baseURL}getFitnessPlan`,{email:localStorage.getItem("email"),workout:{...formData,'date':date}}).then((res)=>{
     setFlag(null)
     setWorkout([])
     let out=[]
@@ -100,7 +99,7 @@ const colTable=useMemo(()=>col1,[col1])
     }
     const changeFormData=(event)=>{
       const{name,value}=event.target;
-      console.log(name,value)
+      
 
       
         setFormData(
@@ -147,13 +146,13 @@ const colTable=useMemo(()=>col1,[col1])
         })
         if(f==false)
         {
-          axios.put(`${baseURL}updateFitnessPlan`,{email:"spiderman123@gmail.com",workout:{...formData,'date':date}}).then((res)=>{
+          axios.put(`${baseURL}updateFitnessPlan`,{email:localStorage.getItem("email"),workout:{...formData,'date':date}}).then((res)=>{
             console.log(res.data)
           })
 
         }
         else if(f==true){
-          axios.post(`${baseURL}postFitnessPlan`,{email:"spiderman123@gmail.com",workout:{...formData,'date':date}})
+          axios.post(`${baseURL}postFitnessPlan`,{email:localStorage.getItem("email"),workout:{...formData,'date':date}})
         .then((res)=>{
           console.log(res.data)
         })
@@ -161,7 +160,7 @@ const colTable=useMemo(()=>col1,[col1])
         }
         }
 
-        setFormData({'id':1,
+        setFormData({
         'name':'',
           'duration':'',
           'timeParam':'Hours',
@@ -180,7 +179,7 @@ const colTable=useMemo(()=>col1,[col1])
 
     
   return (
-    <div>WorkoutPlanner
+    <div>
       <div className='workoutTemplate'>
       <div className='Calender'>
       <div className="Dateselector">
@@ -245,7 +244,7 @@ const colTable=useMemo(()=>col1,[col1])
                                 
                                 cell.column.id=='achieved' ?(
                                   <select value={cell.value} name={cell} onChange={(e)=>{
-                                    cell.row.values['Achieved']=e.target.value
+                                    cell.row.values['achieved']=e.target.value
                                     cell.value=e.target.value
                                     //update the workout data based on the excersise name 
                                     // the name of the excersise will be unique for now
@@ -260,7 +259,7 @@ const colTable=useMemo(()=>col1,[col1])
                                   </select>
                                 ):
                                 cell.column.id=='cross' ?(
-                                  <AiOutlineCloseCircle className='editIcons' onClick={(event)=>{
+                                  <AiOutlineCloseCircle  onClick={(event)=>{
                                     console.log(cell.row.values)
                                     axios.post(`${baseURL}deleteFitnessPlan`,{email:"spiderman123@gmail.com",workout:{...cell.row.values,'date':date}}).then((res)=>{
                                       setWorkout([])
