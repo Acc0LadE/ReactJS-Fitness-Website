@@ -4,7 +4,7 @@ const morgan=require('morgan')
 const bodyParser=require('body-parser')
 const cors = require('cors');
 userRouter=require("./routes/UserRoutes")
-mongoose.connect('mongodb+srv://lavanya:1234@cluster0.ihz48fe.mongodb.net/TestWorkout?retryWrites=true&w=majority',{
+mongoose.connect('mongodb+srv://nithinrk21:1234@cluster0.npneuko.mongodb.net/?retryWrites=true&w=majority',{
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })

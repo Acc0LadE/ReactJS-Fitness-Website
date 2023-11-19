@@ -1,5 +1,5 @@
-.dropDown-contents {
-    /* display: none; 
+  .dropDown-contents {
+  /* display: none; 
     position: absolute;*/
     width: fit-content;
     overflow: auto;
@@ -8,67 +8,84 @@
     color: white;
   /* min-width: 160px; */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 2;
+  z-index: 2  ;
   border: 1px solid black; /* Add border style here */
   border-radius: 4px;
   padding: 10px;
   align-items: center;
-
 }
+
 .dropDown-contents ul:hover {
-    /* display: none; 
+  /* display: none; 
     position: absolute;*/
     color: black;
     background-color:hsl(79, 67%, 52%);
     cursor: pointer;
     padding-right: 5px;
     align-items: center;
-
 }
-.NavContainer{
-    height: 10%;
-    width: 100%;
-    display: flex;
-    justify-content:space-around;
-    align-items: center;
-    background-color: black;
-    color: white;
-    position: fixed;
-    list-style: none;
-   
-    
 
-  }
-  .RemoveLinkStyle {
-    text-decoration: none;
-    color: white;
-  }
+.NavContainer {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  background-color: black;
+  color: white;
+  position: fixed;
+  list-style: none;
+}
+
+.RemoveLinkStyle {
+  text-decoration: none;
+  color: white;
+}
+
 .dropdown-content {
-    display: none;
-    position: absolute;
-    width: 20%;
-    overflow: auto;
-    
-    text-decoration: none;
-    color: white;
+  display: none;
+  position: absolute;
+  width: 20%;
+  overflow: auto;
+  text-decoration: none;
+  color: white;
 }
-.dropDown-contents ul ul Link{
-    text-decoration: none;
-    color: white;
 
-}
-.dropdown:hover .dropdown-content {
-    display: block;
-    color: transparent;
-}
 .dropdown-content a {
-    display: block;
-    color: var(--title-color);
-    padding: 5px;
-    text-decoration: none;
-    background-color: black;
+  display: block;
+  color: var(--title-color);
+  padding: 5px;
+  text-decoration: none;
+  background-color: black;
 }
+
 .dropdown-content ul:hover {
-    color: black;
-    background-color:hsl(79, 67%, 52%);
+  color: black;
+  background-color: hsl(79, 67%, 52%);
+}
+
+/* Updated Code Below */
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  color: transparent;
+}
+
+.dropdown:hover > .dropdown-content {
+  display: block;
+}
+
+.dropdown-content ul {
+  display: none;
+}
+
+.dropdown-content ul:hover {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 100%;
+}
+
+.dropdown-content ul li {
+  white-space: nowrap;
 }
