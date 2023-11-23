@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar';
 import WorkoutPlanner from './components/WorkoutPlanner';
-import { createContext, useState } from 'react';
+import { createContext, useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import DietPlanner from './components/DietPlanner';
 import HomePage from './components/HomePage';
@@ -14,12 +14,24 @@ import ImpNutri from './components/ImpNutri';
 import ImpExc from './components/ImpExc';
 import About from './components/About';
 import Contact from './components/Contact';
+import ListOfExc from './components/ListOfExc';
 
 function App() {
-  const [tab,setTab]=useState('home')
+  //const [tab,setTab]=useState('home')
   
-  
-  
+  console.log(localStorage)
+  useEffect(() => {
+    localStorage.setItem("signin",false)
+    window.addEventListener("beforeunload", alertUser);
+    return () => {
+      
+      window.removeEventListener("beforeunload", alertUser);
+    };
+  }, []);
+  const alertUser = (e) => {
+    e.preventDefault();
+    e.returnValue = "";
+  };
         
   return (
     <div className="header">
@@ -31,8 +43,7 @@ function App() {
         <Route path='dietPlanner' element={<DietPlanner/>}/>
         <Route path='protienSupplements' element={<BuySupplements/>}/>
         <Route path='ImpNutri' element={<ImpNutri/>}/>
-        <Route path='ImpExc' element={<ImpExc/>}/>
-        
+        <Route path='ListOfExc' element={<ListOfExc/>}/>
         <Route path='Contact' element={<Contact/>}/>
         <Route path='/' element={<SigninPage/>}/>
         <Route path='LogIn' element={<LoginPage/>}/>

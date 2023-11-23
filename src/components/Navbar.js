@@ -26,13 +26,14 @@ function Navbar() {
   return (
     <nav>
        
-
+{localStorage.getItem("signin")=="true"?
         <div className="NavContainer">
             <Link to='/HomePage' className='RemoveLinkStyle'><BiHomeAlt2></BiHomeAlt2></Link>
             <ul onMouseEnter={()=>{onHover(0)}} onMouseLeave={()=>{NotOnHover(0)}}> FITNESS
                 {isOpen[0] && (<div className="dropDown-contents">
-                <ul> <Link to='/Importance' className='RemoveLinkStyle'>IMPORTANCE OF EXERCISE</Link></ul>
+                <ul> <Link to='/ImpExc' className='RemoveLinkStyle'>IMPORTANCE OF EXERCISE</Link></ul>
                 <ul> GYMS NEAR ME</ul>
+                <ul><Link to='/ListOfExc' className='RemoveLinkStyle' >LIST OF EXERCISES</Link></ul>
                 <ul><Link to='/workoutPlanner' className='RemoveLinkStyle' >WORKOUT PLANNER</Link></ul>
                 <ul><Link to='/protienSupplements' className='RemoveLinkStyle' >BUY PROTIEN POWDER AND SUPPLIMENTS</Link></ul>
                 </div>)
@@ -53,9 +54,14 @@ function Navbar() {
                 <ul><Link to="/About" className='RemoveLinkStyle'>MY PROFILE</Link></ul>
                 <ul onClick={()=>{
                     localStorage.removeItem("email")
+                    localStorage.removeItem("signin")
                     navigate("/")
                 }}>SIGN OUT</ul>
-                <ul>CONTACT US</ul>
+               
+                
+
+                {/* <ul><Link to='/About' className='RemoveLinkStyle'>ABOUT</Link></ul> */}
+                <ul><Link to='/Contact' className='RemoveLinkStyle'>CONTACT US</Link></ul>
                 </div>)
                 }
             
@@ -63,8 +69,8 @@ function Navbar() {
             
   
 
-        </div>
-       
+        </div>:<></>
+       }
         
     </nav>
   )

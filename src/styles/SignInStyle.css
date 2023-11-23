@@ -24,6 +24,10 @@ form {
     margin: auto;
     
   }
+  .InputFeature{
+    display: flex;
+    margin-bottom: 0;
+  }
   .textarea {
     padding: 8px;
     border: 1px solid #ccc;

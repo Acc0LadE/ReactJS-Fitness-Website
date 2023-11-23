@@ -261,7 +261,7 @@ const colTable=useMemo(()=>col1,[col1])
                                 cell.column.id=='cross' ?(
                                   <AiOutlineCloseCircle  onClick={(event)=>{
                                     console.log(cell.row.values)
-                                    axios.post(`${baseURL}deleteFitnessPlan`,{email:"spiderman123@gmail.com",workout:{...cell.row.values,'date':date}}).then((res)=>{
+                                    axios.post(`${baseURL}deleteFitnessPlan`,{email:localStorage.getItem("email"),workout:{...cell.row.values,'date':date}}).then((res)=>{
                                       setWorkout([])
                                       let out=[]
                                      res.data.response.map((val)=>{

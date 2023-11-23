@@ -89,7 +89,8 @@ h1, h2, h3 {
 }  
   
 .overall{
-    position: relative;
+    /* position: relative; */
+    width: 100%;
 }
   
 a {

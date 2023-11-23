@@ -61,7 +61,7 @@ const LoginPage = () => {
            
         </div>
         
-        <button className='buttonStyle'  onClick={(e)=>{console.log(form); postData(e)}}>Submit</button>
+        <button className='buttonStyle'  onClick={(e)=>{console.log(form);localStorage.setItem("signin",true); postData(e)}}>Submit</button>
         
            
         </div>

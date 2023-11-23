@@ -43,9 +43,7 @@ const HomePage = () => {
             </div>
           </div>
           <div className="program__container grid" >
-            <article className="program__card" onClick={()=>{
-                  nav("/workoutPlanner")
-                }}>
+            <article className="program__card" onClick={(e)=>{nav("/workoutPlanner")}}>
               <div className="program__shape">
                 <img
                   src=".\img\program1.png"
@@ -62,7 +60,7 @@ const HomePage = () => {
                 <i className="ri-arrow-right-line"  />
               {/* </a> */}
             </article>
-            <article className="program__card">
+            <article className="program__card" onClick={(e)=>{nav("/dietPlanner")}}>
               <div className="program__shape">
                 <img
                   src=".\img\program2.png"
