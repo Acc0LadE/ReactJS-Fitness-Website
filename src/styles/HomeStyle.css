@@ -1,0 +1,555 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Red+Hat+Display:wght@400;700;900&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+  
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(79, 72%, 55%);
+  --first-color-light: hsl(79, 97%, 77%);
+  --first-color-alt: hsl(79, 67%, 52%);
+  --first-color-dark: hsl(79, 63%, 50%);
+  --first-color-gray: hsl(79, 6%, 64%);
+  --title-color: hsl(180, 4%, 98%);
+  --title-color-black: hsl(180, 4%, 12%);
+  --text-color: hsl(180, 4%, 72%);
+  --text-color-light: hsl(180, 4%, 65%);
+  --body-color: hsl(180, 12%, 8%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: 'Red Hat Display', sans-serif;
+  --second-font: 'Kaushan Script', cursive;
+  --biggest-font-size: 2rem;
+  --bigger-font-size: 1.5rem;
+  --big-font-size: 1.25rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /*========== Font weight ==========*/
+  --font-bold: 700;
+  --font-black: 900;
+
+  /*========== z index ==========*/
+  /* --z-tooltip: 10;
+  --z-fixed: 100; */
+}
+
+/* Responsive typography */
+/* @media screen and (min-width: 1024px) {
+  :root {
+    --biggest-font-size: 6rem;
+    --bigger-font-size: 3.5rem;
+    --big-font-size: 2.75rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+} */
+
+/*=========header=======*/
+
+
+/*=======Some styles========*/
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+  
+html {
+    scroll-behavior: smooth;
+}
+  
+body,
+button,
+input {
+
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+}
+  
+body {
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+  
+h1, h2, h3 {
+    color: var(--title-color);
+    font-weight: var(--font-bold);
+}  
+  
+.overall{
+    /* position: relative; */
+    width: 100%;
+}
+  
+a {
+    text-decoration: none;
+    margin-left: 5%;
+}
+  
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* =======DROPDOWNS FOR HEADER=======
+
+.dropdown {
+    display: inline-block;
+    color: transparent;
+    padding-bottom: 20px;
+    margin-left: 250px;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    width: 20%;
+    overflow: auto;
+    color: transparent;
+    color: var(--title-color)
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+    color: transparent;
+}
+.dropdown-content a {
+    display: block;
+    color: var(--title-color);
+    padding: 5px;
+    text-decoration: none;
+    background-color: black;
+}
+.dropdown-content a:hover {
+    color: black;
+    background-color:hsl(79, 67%, 52%);
+}
+
+.head{
+    background-color: transparent;
+    font-size: 24px;
+    color: hsl(180, 4%, 98%);
+    border: none;
+} */
+
+/*=======HOME=======*/
+
+.home{
+    position: relative;
+    padding-bottom: 0;
+    padding-top: 50px;
+  }
+  
+  .home__container{
+    padding-top: 4rem;
+    row-gap: 3rem;
+  }
+  
+  .home__data{
+    text-align: center;
+  }
+  
+  .home__subtitle{
+    font-size: var(--bigger-font-size);
+    color:yellowgreen;
+  }
+  
+  .home__title{
+    font-size: var(--biggest-font-size);
+    font-weight: var(--font-black);
+    color: white;
+    -webkit-text-stroke-color: black;
+    stroke-width: 3px;
+    margin: .5rem 0;
+  }
+  
+  .home__subtitle,
+  .home__title{
+    letter-spacing: 1.5px;
+  }
+  
+  .home__description{
+    margin-bottom: 2.5rem;
+    font-size: 24px;
+    color: white;
+  }
+
+  .imagebg{
+    opacity: 0.6;
+  }
+
+/*=======get started=======*/
+
+.button{
+    display: inline-block;
+    background-color: yellowgreen;
+    padding: 18px 32px;
+    border: 1px solid white;
+    color: var(--title-color-black);
+    font-weight: var(--font-bold);
+    cursor: pointer;
+    transition: background .3s;
+    
+  }
+  
+.button:hover{
+    background-color: var(--first-color-alt);
+}
+  
+  .button i{
+    font-size: 1.25rem;
+    transition: transform .3s;
+  }
+  
+  .button__flex{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: .5rem;
+  }
+  
+  .button__flex:hover i{
+    transform: translateX(.25rem);
+  }
+
+/*sponsor*/
+
+.sponsor__logo{
+  padding-left: 0px;
+}
+
+.sponsor__footer{
+  padding-top: 50px;
+}
+.logos__img{
+  text-align: left;
+}
+
+/*gym_bg*/
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+  .centered {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  /*features*/
+  .program__container{
+    grid-template-columns: 225px;
+    justify-content: center;
+    row-gap: 2rem;
+  }
+  
+  .program__card{
+    display: grid;
+    background-color: hsla(79, 6%, 64%, .07);
+    padding: 1.5rem 2rem;
+    border: 2px solid transparent;
+    transition: background .5s, border .4s;
+  }
+  
+  .program__img{
+    width: 38px;
+  }
+  
+  .program__shape{
+    width: 50px;
+    height: 50px;
+    background-color: var(--first-color)--first-color-gray;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    margin-bottom: 1rem;
+    transition: background .5s;
+  }
+  
+  .program__title{
+    font-size: var(--h3-font-size);
+    margin-bottom: 1rem;
+  }
+  
+  .program__description{
+    font-size: var(--small-font-size);
+    letter-spacing: .5px;
+    line-height: 150%;
+  }
+  
+  .program__title,
+  .program__description{
+    transition: color .5s;
+  }
+  
+  .program__button{
+    justify-self: flex-end;
+    margin-top: 1.5rem;
+    font-size:  1.25rem;
+    color: var(--title-color);
+    opacity: 0;
+    transition: opacity .4s;
+  }
+  
+  .program__button i{
+    display: block;
+    transition: transform .3s;
+  }
+  
+  .program__button:hover i{
+    transform: translateX(.25rem);
+  }
+  
+  .program__card:hover{
+    background-color: var(--first-color);
+    border: 2px solid var(--first-color-light);
+  }
+  
+  .program__card:hover .program__shape{
+    background-color: var(--first-color-light);
+  }
+  
+  .program__card:hover .program__title,
+  .program__card:hover .program__description{
+    color: var(--title-color-black)
+  }
+  
+  .program__card:hover .program__button{
+    opacity: 1;
+  }
+
+  /*section*/
+
+  .section {
+    padding: 4.5rem 0 2rem;
+  }
+  
+  .section__data {
+    display: flex;
+    flex-direction: column;
+    row-gap: .75rem;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .section__title, 
+  .section__title-border {
+    font-size: var(--big-font-size);
+    letter-spacing: 1.5px;
+  }
+  
+  .section__subtitle {
+    font-size: 40px;
+    font-family: var(--body-font);
+    font-weight: 400;
+    letter-spacing: 2.5px;
+    color: var(--first-color);
+  }
+  
+  .section__titles {
+    display: flex;
+    column-gap: .75rem;
+    justify-content: center;
+  }
+  
+  .section__title-border {
+    -webkit-text-stroke: 2px var(--text-color);
+    color: transparent;
+  }
+  
+  .grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  
+  .main {
+    overflow: hidden; /* For animation ScrollReveal */
+  }
+  
+  .color-red {
+    color: hsl(0, 80%, 64%);
+  }
+  
+  .color-green {
+    color: var(--first-color);
+  }
+
+/*contact us*/
+
+#email{
+  margin-right: 70%;
+  padding-right: px;
+}
+
+.contact__mobile{
+  margin-bottom: 230px;
+}
+
+/*about*/
+
+.about_heading{
+  font-size: 40px;
+  font-family: var(--body-font);
+  font-weight: 400;
+  letter-spacing: 2.5px;
+  color: var(--first-color); 
+}
+
+.about__title{
+  font-family: var(--first-color-alt);
+  margin-bottom: 60px;
+  font-size: 25px;
+}
+
+.about__subtitle{
+  color: var(--first-color);
+  text-align: left;
+  margin-left: 40px;
+  font-size: 25px;
+  margin-top: 60px;
+}
+
+.about__description{
+  text-align: left;
+  margin-left: 40px;
+  font-size: 20px;
+  font-family: var(--first-color);
+}
+
+.diet__description{
+  margin-bottom: 60px;
+}
+/*my profile*/
+
+.card_profile {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: auto;
+  text-align: left;
+}
+
+.title_profile {
+  color: grey;
+  font-size: 18px;
+}
+
+.prof_anchor {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+.disp{
+  display: inline-flex;
+}
+
+.profile___text{
+  text-align: left;
+}
+
+h1.profile__fields{
+  display: inline-block;
+  text-align: left;
+  padding-left: 200px;
+  color: hsl(79, 67%, 52%);
+  font-size: 24px;
+}
+
+p.profile__stored{
+  display: inline;
+  font-size: 24px;
+
+}
+
+p.bmi__desc{
+  opacity: 0.6;
+  padding-left: 150px;
+}
+
+.profile_sponsor{
+  padding-top: 80px;
+}
+
+.profile__card{    
+    display: grid;
+    background-color: hsla(79, 6%, 64%, .07);
+    padding: 40px 40px 40px 40px;
+    border: 2px solid transparent;
+    transition: background .5s, border .4s;
+}
+
+.profile__card:hover{
+  background-color: hsl(79, 63%, 50%);
+  border: 2px solid var(--first-color-light);
+  color: black;
+  opacity: 1;
+}
+
+.profile__card:hover .program__shape{
+  background-color: var(--first-color-light);
+  color: black;
+}
+
+.profile__card:hover .profile__shape,
+.profile__card:hover .profile__fields{
+  color: var(--title-color-black)
+}
+
+.profile__card:hover .program__button{
+  opacity: 1;
+  color: black;
+}
+
+.card__size{
+  width: 1000px;
+}
+
+ .profile__shape{
+    width: 50px;
+    height: 50px;
+    background-color: var(--first-color)--first-color-gray;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    margin-bottom: 1rem;
+    transition: background .5s;
+  }
+
+
+.header_tabs{
+  margin-bottom: 100px;
+}
+
+/* signin signup card css using react*/
+
+.inputs{
+  margin-top: 55px;
+  display: flex;
+  flex-direction: column;
+  gap :25px;
+}
+.input{
+  display: flex;
+  align-items: center;
+  margin:auto;
+  width: 480px;
+  height: 80px;
+  background:white;
+  border-radius: 6px;
+}
+.input img{
+  margin :0px 30 px;
+}

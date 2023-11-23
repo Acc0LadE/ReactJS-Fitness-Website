@@ -61,7 +61,6 @@ const postUserData=(req,res,next)=>{
                 }
             )
         })
-    console.log(resVal)
     
 
 }

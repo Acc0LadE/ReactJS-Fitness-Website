@@ -175,7 +175,7 @@ const colTable=useMemo(()=>col1,[col1])
     const {getTableProps,getTableBodyProps,headerGroups,rows,prepareRow}=tableInstance
     
   return (
-    <div>WorkoutPlanner
+    <div>
     <div className='workoutTemplate'>
     <div className='Calender'>
     <div className="Dateselector">
